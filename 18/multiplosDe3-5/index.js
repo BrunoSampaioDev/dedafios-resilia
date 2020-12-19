@@ -7,9 +7,11 @@ function encontraMultiplos(length){
             multiplos.push(i);
         }else if(i % 5 == 0){
             multiplos.push(i);
+        }else if(i < 0){
+            multiplos = 0;
         }
     }
     console.log(multiplos);
 }
 
-encontraMultiplos(20);
+encontraMultiplos(23);
