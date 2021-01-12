@@ -1,0 +1,35 @@
+form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+input{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+table{
+    width: 400px;
+    margin: 20px auto;
+}
+th{
+    background-color:rgba(0, 0, 0, 0.418);
+    color: white;
+    border: 1px solid #000;
+}
+tr{
+    background-color: rgba(128, 128, 128, 0.212);
+}
