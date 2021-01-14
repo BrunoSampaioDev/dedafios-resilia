@@ -1,9 +1,9 @@
 let formulario = document.querySelector('#formulario');
 
-
+let array = [];
 let animal = {
 
-    nome: this.formulario.nome,
+    nome: this.formulario.nome.value,
     raca: this.formulario.raca,
     idade: this.formulario.idade,
     cadastrar: cadastrar,
@@ -37,6 +37,8 @@ function cadastrar(){
         </tr>
     </table>
     `
+    array.push(animal)
+    console.log(array)
 }
 cadastrar()
 

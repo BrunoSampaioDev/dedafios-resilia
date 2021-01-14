@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function cachorro(nomeCao, pesoCao, idadeCao) {
+
+            let animal = {
+
+                nome: nomeCao,
+                peso: pesoCao,
+                idade: idadeCao,
+                cartera: [],
+                vacinas: function  oi (nomeVacina) {
+                    animal.cartera.push(nomeVacina)
+                }
+
+            }
+
+
+
+            return animal
+        }
+
+
+        let cachorro1 = cachorro('Bolota', '12', '3');
+        let cachorro2 = cachorro('Mery', '11', '2');
+
+        cachorro1.vacinas('CoronaVac')
+        console.log(cachorro1);
+        
+        cachorro2.vacinas('Raiva')
+        console.log(cachorro2);
+
+        
+
+    </script>
+</body>
+
+</html>
