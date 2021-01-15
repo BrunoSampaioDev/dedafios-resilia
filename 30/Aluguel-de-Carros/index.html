@@ -11,25 +11,36 @@
 </head>
 
 <body>
-
-    <div class="containerTable">
-        <table id="tabelaCarros">
-            <!-- <thead class="thead">
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Placa</th>
-                <th>Status</th>
-            </thead> -->
-        </table>
+    <div class="dash">
+        <nav class="menu">
+            <div class="logo">LocCar</div>
+            <div class="user">B</div>
+            <ul class="meuUl">
+                <a href="" class="mostrarModal"><li class="menuItem">Cadastrar Veiculo</li></a>
+                <a href=""><li class="menuItem">Listar Veiculo</li></a>
+                <a href=""><li class="menuItem">Cadastrar cliente</li></a>
+                <a href=""><li class="menuItem">Listar cliente</li></a>
+                <a href=""><li class="menuItem">Localizar Veiculo</li></a>
+            </ul>
+        </nav>
+        <div class="containerTable">
+            <div id="tabelaCarros">
+                
+            </div>
+        </div>
     </div>
+    
 
-    <div class="formCadastroCarros">
+
+    <!-- MODAL DE CADASTRO DE CARROS -->
+    <div class="formCadastroCarros fecharModal">
         <form id="formCarro">
             <input class="inp" type="text" placeholder="Marca" id="marca">
             <input class="inp" type="text" placeholder="Modelo" id="modelo">
             <input class="inp" type="text" placeholder="Placa" id="placa">
             <input class="inp btn_submit" type="submit">
         </form>
+        <button class="btnFecharModal">X</button>
     </div>
 
     <script src="./index.js"></script>

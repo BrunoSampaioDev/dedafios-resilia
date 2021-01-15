@@ -1,7 +1,21 @@
 
 let formCarro = document.querySelector('#formCarro');
 let tabelaCarros = document.getElementById('tabelaCarros');
+let btnFecharModal = document.querySelector('.btnFecharModal');
+let btnMostrarModal = document.querySelector('.mostrarModal');
 
+btnMostrarModal.addEventListener('click', function(){
+    event.preventDefault()
+    let modal = document.querySelector('.formCadastroCarros');
+    modal.classList.add('mostrarModal');
+});
+
+btnFecharModal.addEventListener('click', function(){
+    let modal = document.querySelector('.formCadastroCarros');
+    modal.classList.remove('mostrarModal');
+    modal.classList.add('fecharModal');
+    
+});
 
 let arraycarros = [];
 
@@ -12,11 +26,12 @@ function car() {
         marca: this.formCarro.marca.value,
         modelo: this.formCarro.modelo.value,
         placa: this.formCarro.placa.value,
+        
         cadastrar: function () {
-            let linha = document.createElement('tr');
-            let tdMarca = document.createElement('td');
-            let tdModelo = document.createElement('td');
-            let tdPlaca = document.createElement('td');
+            let linha = document.createElement('div');
+            let tdMarca = document.createElement('p');
+            let tdModelo = document.createElement('p');
+            let tdPlaca = document.createElement('p');
             let tdButton = document.createElement('button');
 
 
@@ -29,8 +44,10 @@ function car() {
             linha.appendChild(tdModelo);
             linha.appendChild(tdPlaca);
             linha.appendChild(tdButton);
+            linha.classList.add('carroEmEstoque')
 
             tabelaCarros.appendChild(linha);
+            formCarro.reset()
 
             tdButton.addEventListener('click', function () {
 
@@ -46,6 +63,7 @@ function car() {
 
 
             });
+            
 
 
         },
@@ -56,10 +74,12 @@ function car() {
         devolver:function(){
             alert('Carro Devolvido')
             this.status = false
-        }
+        },
+        
     }
     arraycarros.push(carro)
     carro.cadastrar()
+
 
     return carro
 

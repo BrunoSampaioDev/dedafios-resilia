@@ -1,22 +1,99 @@
+/* 
+amarelo #e6b91e
+cinza do header #252525
+cinza do body #292929
+cinza da linha #2a2a2a
+azul #1f6b82
+*/
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
-.containerTable{
-    height: 50vh;
-    overflow-y: scroll;
-}
+
 
 body{
+    position: relative;
     background-color: rgb(236, 236, 236);
 }
 
-table{
+.menu{
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 100vh;
+    color: #fff;
+}
+
+.logo{
+    font-size: 25px;
+    margin-top: 20px;
+    color: #e6b91e ;
+}
+
+.user{
+    background-color: #e6b91e;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.meuUl{
+    list-style: none;
+    margin-top: 30px;
+}
+
+.menuItem{
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: #e6b91e;
+    transition: 800ms;
+}
+
+.dash{
+    display: flex;
+}
+
+.containerTable{
+    background-color: #c9c8c817;
     width: 100%;
     text-align: center;
+}
+
+.carroEmEstoque{
+    width: 90%;
+    background-color: #fff;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
+    box-shadow: 4px 6px 5px -1px rgba(0, 0, 0, 0.103);
+}
+.carroEmEstoque > P {
+    width: 100px;
+    color: #7a7979;
+    font-size: 13px;
+}
+
+
+table{
+    margin: auto;
+    width: 90%;
+    text-align: center;
     border-collapse: collapse;
-    
 }
 
 
@@ -27,24 +104,30 @@ thead{
 
 tr{
     background-color: #fff;
+    
+    
 }
 
 td{
     padding: 5px;
     width: 300px;
-    border: 1px solid #000;
+    margin-top: 20px;
 }
 
 button{
-    width: 50%;
+    width: 80px;
     height: 30px;
-    background-color: #038C8C;
+    background-color: #e6b91e;
     color: white;
     border: none;
+    border-radius: 5px;
 }
 
 button:hover{
     cursor: pointer;
+}
+button:focus{
+    outline: 0;;
 }
 
 .btnAlugado{
@@ -52,23 +135,33 @@ button:hover{
 }
 
 .formCadastroCarros{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height:100vh;
     display: flex;
     justify-content: center;
-    background-color: #026873;
-    height: 315px;
+    background-color: #29292985;
 }
 
 #formCarro{
-    margin-top: 10px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
+    margin-left: 500px;
+    height: 250px;
+    width: 245px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 6px 5px -1px rgba(0,0,0,0.29);
 }
 
 .inp{
     background-color: #fff;
-    border: none;
+    border: 1px solid #29292985;
     width: 220px;
-    height: 30px;
+    height: 15px;
     border-radius: 3px;
     color: #000;
     margin-top: 20px;
@@ -78,4 +171,27 @@ button:hover{
 .btn_submit{
     width: 240px;
     height: 40px;
+    background-color: #e6b91e;
+    color: #fff;
+    border: none;
+}
+
+.btnFecharModal{
+    position: relative;
+    top: -300px;
+    left: 770px;
+    border-radius: 100px;
+    width: 30px;
+    background-color: #e6b91e;
+    color: #29292985;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.fecharModal{
+    display: none;
+}
+
+.mostrarModal{
+    display: inline;
 }
