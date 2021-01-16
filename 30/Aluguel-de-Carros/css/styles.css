@@ -16,6 +16,8 @@ azul #1f6b82
 body{
     position: relative;
     background-color: rgb(236, 236, 236);
+    animation-duration: 0.5s;
+    animation-name: fadein;
 }
 
 .menu{
@@ -25,7 +27,7 @@ body{
     align-items: center;
     width: 200px;
     height: 100vh;
-    color: #fff;
+    
 }
 
 .logo{
@@ -50,11 +52,12 @@ body{
 
 .menuItem{
     padding: 5px;
+    font-size: 13px;
 }
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: #a5a4a4;
 }
 a:hover{
     color: #e6b91e;
@@ -92,6 +95,8 @@ a:hover{
     display: flex;
 }
 
+/* LISTAGEM DE CARROS */
+
 .containerTable{
     background-color: #c9c8c817;
     width: 100%;
@@ -108,10 +113,12 @@ a:hover{
     margin: 5px 0 5px 0;
     border-radius: 5px;
     box-shadow: 4px 6px 5px -1px rgba(0, 0, 0, 0.103);
+    animation-duration: 0.5s;
+    animation-name: fadeout;
 }
 .carroEmEstoque > P {
     width: 100px;
-    color: #7a7979;
+    color: #a5a4a4;
     font-size: 13px;
 }
 
@@ -135,6 +142,16 @@ button:focus{
 .btnAlugado{
     background-color: red;
 }
+
+.backAlugado{
+    background-color: #292929;
+    color:  #ffffff;
+}
+.backSumir{
+    color: #fff;
+    transition: 0.4s;
+}
+
 
 .formCadastroCarros{
     position: absolute;
@@ -176,6 +193,7 @@ button:focus{
     background-color: #e6b91e;
     color: #fff;
     border: none;
+    border-radius: 5px;
 }
 
 .btnFecharModal{
@@ -190,14 +208,52 @@ button:focus{
     font-weight: 800;
 }
 
+@keyframes fadeout {
+    from {
+      opacity: 1;
+      background-color: #e6b91e;
+    }
+  
+    to {
+      opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
 .fecharModal{
     display: none;
+    animation-duration: 0.5s;
+    animation-name: fadeout;
 }
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
 
 .mostrarModal{
     display: inline;
+    animation-duration: 0.5s;
+    animation-name: fadein;
 }
 
+
+/* LOGIN */
 .contaier-login{
     background-color: #292929;
     height: 100vh;

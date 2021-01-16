@@ -4,17 +4,16 @@ let tabelaCarros = document.getElementById('tabelaCarros');
 let btnFecharModal = document.querySelector('.btnFecharModal');
 let btnMostrarModal = document.querySelector('.mostrarModal');
 
-btnMostrarModal.addEventListener('click', function(){
+btnMostrarModal.addEventListener('click', function () {
     event.preventDefault()
     let modal = document.querySelector('.formCadastroCarros');
     modal.classList.add('mostrarModal');
+
 });
 
-btnFecharModal.addEventListener('click', function(){
+btnFecharModal.addEventListener('click', function () {
     let modal = document.querySelector('.formCadastroCarros');
     modal.classList.remove('mostrarModal');
-    modal.classList.add('fecharModal');
-    
 });
 
 let arraycarros = [];
@@ -28,7 +27,7 @@ function car() {
         marca: this.formCarro.marca.value,
         modelo: this.formCarro.modelo.value,
         placa: this.formCarro.placa.value,
-        
+
         cadastrar: function () {
             let linha = document.createElement('div');
             let tdMarca = document.createElement('p');
@@ -45,7 +44,7 @@ function car() {
             linha.appendChild(tdModelo);
             linha.appendChild(tdPlaca);
             linha.appendChild(tdButton);
-            linha.classList.add('carroEmEstoque')
+            linha.classList.add('carroEmEstoque');
 
             tabelaCarros.appendChild(linha);
 
@@ -61,11 +60,13 @@ function car() {
                     carro.alugar();
                     tdButton.textContent = 'Alugado';
                     tdButton.classList.add('btnAlugado');
+                    linha.classList.add('backAlugado')
+                    linha.classList.add('backSumir')
 
                     let totalCarrosAlugados = document.querySelector('.total-carros-alugados');
                     arrayAlugados.push(carro);
                     totalCarrosAlugados.textContent = arrayAlugados.length;
-                }else{
+                } else {
                     tdButton.textContent = 'Alugar';
                     tdButton.classList.remove('btnAlugado');
 
@@ -75,9 +76,14 @@ function car() {
                     arrayAlugados.pop()
                     arrayEntregues.pop()
                     carro.devolver();
-                }
+                    linha.classList.add('backSumir');
+                    setTimeout(function () {
+                        linha.classList.remove('backAlugado')
+                    }, 300);
+
+                };
             });
-            
+
 
 
         },
@@ -85,11 +91,11 @@ function car() {
             alert('Carro Alugado')
             this.status = true
         },
-        devolver:function(){
+        devolver: function () {
             alert('Carro Devolvido')
             this.status = false
         },
-        
+
     }
     arraycarros.push(carro)
     carro.cadastrar()
@@ -106,7 +112,7 @@ formCarro.addEventListener('submit', function () {
 
     event.preventDefault()
     car();
-    
+
 });
 
 
