@@ -4,46 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Carro</title>
+    <title>LocCar - Login</title>
 </head>
 
 <body>
-    <div class="dash">
-        <nav class="menu">
-            <div class="logo">LocCar</div>
-            <div class="user">B</div>
-            <ul class="meuUl">
-                <a href="" class="mostrarModal"><li class="menuItem">Cadastrar Veiculo</li></a>
-                <a href=""><li class="menuItem">Listar Veiculo</li></a>
-                <a href=""><li class="menuItem">Cadastrar cliente</li></a>
-                <a href=""><li class="menuItem">Listar cliente</li></a>
-                <a href=""><li class="menuItem">Localizar Veiculo</li></a>
-            </ul>
-        </nav>
-        <div class="containerTable">
-            <div id="tabelaCarros">
-                
-            </div>
-        </div>
-    </div>
-    
 
-
-    <!-- MODAL DE CADASTRO DE CARROS -->
-    <div class="formCadastroCarros fecharModal">
-        <form id="formCarro">
-            <input class="inp" type="text" placeholder="Marca" id="marca">
-            <input class="inp" type="text" placeholder="Modelo" id="modelo">
-            <input class="inp" type="text" placeholder="Placa" id="placa">
-            <input class="inp btn_submit" type="submit">
+    <div class="contaier-login">
+        <form action="./dash.html" id="login">
+            <p class="logo-login">LocCar</p>
+            <input class="inp login-inp" type="text" name="login" placeholder="Nome de usuario">
+            <input class="inp login-inp" type="password" name="senha" placeholder="senha">
+            <input class="btn_submit login-inp" type="submit">
+            <p>Esqueceu sua senha?</p>
         </form>
-        <button class="btnFecharModal">X</button>
     </div>
 
-    <script src="./index.js"></script>
+
 </body>
 
 </html>

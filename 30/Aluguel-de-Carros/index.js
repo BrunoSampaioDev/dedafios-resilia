@@ -18,6 +18,8 @@ btnFecharModal.addEventListener('click', function(){
 });
 
 let arraycarros = [];
+let arrayAlugados = [];
+let arrayEntregues = [];
 
 function car() {
 
@@ -34,7 +36,6 @@ function car() {
             let tdPlaca = document.createElement('p');
             let tdButton = document.createElement('button');
 
-
             tdMarca.textContent = this.marca;
             tdModelo.textContent = this.modelo;
             tdPlaca.textContent = this.placa;
@@ -47,21 +48,34 @@ function car() {
             linha.classList.add('carroEmEstoque')
 
             tabelaCarros.appendChild(linha);
-            formCarro.reset()
+
+            let totalCarrosCadastrados = document.querySelector('.total-carros-cadastrados');
+            totalCarrosCadastrados.textContent = arraycarros.length;
+
+
+            formCarro.reset();
 
             tdButton.addEventListener('click', function () {
 
                 if (carro.status == false) {
-                    carro.alugar()
-                    tdButton.textContent = 'Alugado'
-                    tdButton.classList.add('btnAlugado')
+                    carro.alugar();
+                    tdButton.textContent = 'Alugado';
+                    tdButton.classList.add('btnAlugado');
+
+                    let totalCarrosAlugados = document.querySelector('.total-carros-alugados');
+                    arrayAlugados.push(carro);
+                    totalCarrosAlugados.textContent = arrayAlugados.length;
                 }else{
-                    tdButton.textContent = 'Alugar'
-                    tdButton.classList.remove('btnAlugado')
-                    carro.devolver()
+                    tdButton.textContent = 'Alugar';
+                    tdButton.classList.remove('btnAlugado');
+
+                    let totalCarrosAlugados = document.querySelector('.total-carros-alugados');
+                    arrayEntregues.push(carro);
+                    totalCarrosAlugados.textContent -= arrayEntregues.length;
+                    arrayAlugados.pop()
+                    arrayEntregues.pop()
+                    carro.devolver();
                 }
-
-
             });
             
 
@@ -81,7 +95,7 @@ function car() {
     carro.cadastrar()
 
 
-    return carro
+    return carro;
 
 }
 
@@ -91,8 +105,8 @@ function car() {
 formCarro.addEventListener('submit', function () {
 
     event.preventDefault()
-    car()
-    console.log(arraycarros);
+    car();
+    
 });
 
 

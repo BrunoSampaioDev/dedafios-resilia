@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>LocCar - Dash Board</title>
+</head>
+
+<body>
+    <div class="dash">
+        <nav class="menu">
+            <div class="logo">LocCar</div>
+            <div class="user">B</div>
+            <ul class="meuUl">
+                <a href="" class="mostrarModal"><li class="menuItem">Cadastrar Veiculo</li></a>
+                <a href=""><li class="menuItem">Listar Veiculo</li></a>
+                <a href=""><li class="menuItem">Cadastrar cliente</li></a>
+                <a href=""><li class="menuItem">Listar cliente</li></a>
+                <a href=""><li class="menuItem">Localizar Veiculo</li></a>
+            </ul>
+        </nav>
+        <div class="containerTable">
+            <div class="dashStatus">
+                <div class="status">
+                    <p class="title-dash-status">Total de carros cadastrados</p>
+                    <p class="total-carros-cadastrados totais-dash">0</p>
+                </div>
+                <div class="status">
+                    <p class="title-dash-status">Total de carros alugados</p>
+                    <p class="total-carros-alugados totais-dash">0</p>
+                </div>
+                <div class="status">
+                    <p class="title-dash-status">Total de carros na oficina</p>
+                    <p class="total-carros-oficina totais-dash">0</p>
+                </div>
+            </div>
+            <div id="tabelaCarros">
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- MODAL DE CADASTRO DE CARROS -->
+    <div class="formCadastroCarros fecharModal">
+        <form id="formCarro">
+            <input class="inp" type="text" placeholder="Marca" id="marca">
+            <input class="inp" type="text" placeholder="Modelo" id="modelo">
+            <input class="inp" type="text" placeholder="Placa" id="placa">
+            <input class="inp btn_submit" type="submit">
+        </form>
+        <button class="btnFecharModal">X</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

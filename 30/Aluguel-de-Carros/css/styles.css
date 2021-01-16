@@ -61,6 +61,33 @@ a:hover{
     transition: 800ms;
 }
 
+/* status dash */
+
+.dashStatus{
+    margin: 30px 0 30px 0;
+    display: flex;
+}
+.status{
+    margin: auto;
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 4px 6px 5px -1px rgba(0, 0, 0, 0.11);
+}
+
+.title-dash-status{
+    margin-top: 20px;
+    color: #29292985;
+}
+
+.totais-dash{
+    font-size: 30px;
+    margin-top: 20px;
+    color: #292929;
+
+}
+
 .dash{
     display: flex;
 }
@@ -88,31 +115,6 @@ a:hover{
     font-size: 13px;
 }
 
-
-table{
-    margin: auto;
-    width: 90%;
-    text-align: center;
-    border-collapse: collapse;
-}
-
-
-thead{
-    background-color: #026873;
-    
-}
-
-tr{
-    background-color: #fff;
-    
-    
-}
-
-td{
-    padding: 5px;
-    width: 300px;
-    margin-top: 20px;
-}
 
 button{
     width: 80px;
@@ -194,4 +196,40 @@ button:focus{
 
 .mostrarModal{
     display: inline;
+}
+
+.contaier-login{
+    background-color: #292929;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.logo-login{
+    text-align: center;
+    color: #292929;
+    font-size: 20px;
+}
+
+#login{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+.login-inp{
+    margin: auto;
+    
+}
+
+.back-login{
+    height: 100vh;
+    background-color: #292929;
 }
