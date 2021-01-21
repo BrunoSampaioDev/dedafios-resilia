@@ -1,0 +1,11 @@
+
+#formulario{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+input{
+    margin-top: 10px;
+}

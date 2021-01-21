@@ -16,11 +16,25 @@
             <div class="logo">LocCar</div>
             <div class="user">B</div>
             <ul class="meuUl">
-                <a href="" class="mostrarModal"><li class="menuItem">Cadastrar Veiculo</li></a>
-                <a href=""><li class="menuItem">Listar Veiculo</li></a>
-                <a href=""><li class="menuItem">Cadastrar cliente</li></a>
-                <a href=""><li class="menuItem">Listar cliente</li></a>
-                <a href=""><li class="menuItem">Localizar Veiculo</li></a>
+                <a href="" class="mostrarModal">
+                    <li class="menuItem">Cadastrar Veiculo</li>
+                </a>
+
+                <a href="">
+                    <li class="menuItem">Listar Veiculo</li>
+                </a>
+
+                <a href="" class="btnCadastrarCliente">
+                    <li class="menuItem">Cadastrar cliente</li>
+                </a>
+
+                <a href="">
+                    <li class="menuItem">Listar cliente</li>
+                </a>
+
+                <a href="">
+                    <li class="menuItem">Localizar Veiculo</li>
+                </a>
             </ul>
         </nav>
         <div class="containerTable">
@@ -38,12 +52,21 @@
                     <p class="total-carros-oficina totais-dash">0</p>
                 </div>
             </div>
+            <div class="titulos-veiculo">
+                <p>Marca</p>
+                <p>Modelo</p>
+                <p>Placa</p>
+                <p>Cor do veiculo</p>
+                <p>Documento</p>
+                <p>Rastrear</p>
+                <P>Status</P>
+            </div>
             <div id="tabelaCarros">
-                
+
             </div>
         </div>
     </div>
-    
+
 
 
     <!-- MODAL DE CADASTRO DE CARROS -->
@@ -52,12 +75,37 @@
             <input class="inp" type="text" placeholder="Marca" id="marca" autocomplete="off" required>
             <input class="inp" type="text" placeholder="Modelo" id="modelo" autocomplete="off" required>
             <input class="inp" type="text" placeholder="Placa" id="placa" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="Cor" id="cor" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="Documento" id="documento" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="Ratreador" id="ratreador" autocomplete="off" required>
             <input class="inp btn_submit" type="submit">
         </form>
         <button class="btnFecharModal">X</button>
     </div>
 
+    <!-- MODAL DE CADASTRO DE clientes -->
+    <div class="formCadastroClientes fecharModal">
+        <form id="formCliente">
+            <input class="inp" type="text" placeholder="Nome" id="nome" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="Sobrenome" id="sobrenome" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="CNH:" id="cnh" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="RG:" id="rg" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="CPF:" id="cpf" autocomplete="off" required>
+            <input class="inp" type="text" placeholder="Cartao de credito" id="cartao" autocomplete="off" required>
+            <input class="inp btn_submit" type="submit">
+        </form>
+        <button class="btnFecharModalClientes">X</button>
+    </div>
+
+    <div class="carroXcliente fecharModal">
+        <div class="formSelecioneCliente">
+            
+        </div>
+        
+    </div>
+
     <script src="./index.js"></script>
+    <script src="./clientes.js"></script>
 </body>
 
 </html>
